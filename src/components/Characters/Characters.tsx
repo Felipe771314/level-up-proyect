@@ -1,0 +1,2 @@
+// caracters.tsx
+export {};
