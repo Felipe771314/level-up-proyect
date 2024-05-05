@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { axiosInstance } from '../../utils/services/axios.config';
+import AxiosConfig from '../../utils/services/axiosconfig'; // Asegúrate de importar AxiosConfig correctamente
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -17,13 +17,19 @@ function CardsGrid() {
   const [characters, setCharacters] = useState<Character[]>([]);
 
   useEffect(() => {
-    axiosInstance.get('/character')
-      .then(response => {
-        setCharacters(response.data.results);
-      })
-      .catch(error => {
+    const fetchData = async () => {
+      try {
+        const axiosInstance = AxiosConfig.getInstance();
+        const response = await axiosInstance.get('/character');
+        if (response && response.data && response.data.results) {
+          setCharacters(response.data.results);
+        }
+      } catch (error) {
         console.error('Error fetching data:', error);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (

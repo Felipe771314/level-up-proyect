@@ -18,6 +18,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .ts",
     "test:mutation": "stryker run",
+    "generate": "plop",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -26,10 +27,9 @@
     "@testing-library/react": "^14.2.2",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.2",
+    "@types/node": "^20.11.29",
     "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.23",
-    "axios": "^1.6.8",
+    "axios": "^0.25.0",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
@@ -37,6 +37,7 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "stryker": "^0.35.1",
+    "styled-components": "^6.1.8",
     "typescript": "^5.4.5",
     "update": "^0.7.4",
     "web-vitals": "^3.5.2"
@@ -56,26 +57,33 @@
     "@storybook/test": "^8.0.9",
     "@stryker-mutator/core": "^8.2.6",
     "@stryker-mutator/vitest-runner": "^8.2.6",
-    "@types/node": "^20.11.29",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@vitest/coverage-v8": "^1.4.0",
+    "css-loader": "^7.1.1",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "handlebars": "^4.7.8",
+    "handlebars-loader": "^1.7.3",
     "husky": "^8.0.3",
+    "node-sass": "^7.0.3",
     "prettier": "^3.2.5",
     "prop-types": "^15.8.1",
+    "sass-loader": "^14.2.1",
     "storybook": "^8.0.9",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
     "typescript": "*",
     "vite": "^5.0.8",
     "vite-plugin-dts": "^3.7.3",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.4.0",
-    "webpack": "^5.91.0"
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   },
   "eslintConfig": {
     "extends": [
@@ -96,7 +104,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "eccomerce",
+  "description": "ecommerce",
   "main": "index.js",
   "license": "MIT"
 }
